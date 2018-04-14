@@ -189,10 +189,10 @@ struct device_settings
                                 // the screen is divided into 400 parts vertically which
                                 // are marked as 0 to 400 from top to bottom respectively
                                 // the range of <pos> is from 50 to 350
-  double math_decode_threshold[MAX_CHNS];  // 0: threshold of decode channel 1 (SPI:MISO for modelserie 6)
-                                           // 1: threshold of decode channel 2 (SPI:MOSI for modelserie 6)
-                                           // 2: threshold of decode channel 3 (SPI:SCLK for modelserie 6)
-                                           // 3: threshold of decode channel 4 (SPI:SS for modelserie 6)
+  double math_decode_threshold[MAX_CHNS];  // 0: threshold of decode channel 1 for series 1, PAR:THR/RS232:RTHR/SPI:SDA/SPI:MISO/IIC:SDA for series != 1
+                                           // 1: threshold of decode channel 2 for series 1, PAR:THR/RS232:TTHR/SPI:SCLK/SPI:MOSI/IIC:SCLK for series != 1
+                                           // 2: threshold of decode channel 3 for series 1, SPI:SCLK for series != 1
+                                           // 3: threshold of decode channel 4 for series 1, SPI:SS for series != 1
                                            // (-4 x VerticalScale - VerticalOffset) to
                                            // (4 x VerticalScale - VerticalOffset)
   double math_decode_threshold_uart_tx;    // threshold of RS232:TX for modelserie 6
